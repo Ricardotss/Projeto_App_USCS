@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Desempenho Acadêmico</title>
+</head>
+<body style="background-color: #F8F8FF">
+    <h1 style="text-align: center; color: #6B8E23">Calculadora de Desempenho Acadêmico</h1>
+    <form action="/" method="POST" style="text-align: center">
+        <label for="num_avaliacoes">Número de avaliações:</label>
+        <input type="number" id="num_avaliacoes" name="num_avaliacoes" value="3" min="1" max="10"><br><br>
+
+        {% for i in range(num_avaliacoes) %}
+        <div class="form-group">
+          <label for="nota{{i}}">Nota da avaliação {{i+1}}:</label>
+          <input type="number" class="form-control" id="nota{{i}}" name="nota{{i}}" required>
+        </div>
+        {% endfor %}
+
+        <input type="hidden" id="peso" name="peso" value="10">
+
+        <br>
+        <label for="media_aprovacao">Média de aprovação:</label>
+        <input type="number" id="media_aprovacao" name="media_aprovacao" value="6" min="1" max="10"><br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>
