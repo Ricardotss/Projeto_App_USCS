@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Calculadora de Desempenho Acadêmico</title>
-  </head>
-  <body>
-    <h1>Bem-vindo à Calculadora de Desempenho Acadêmico!</h1>
-    <p>Este programa ajudará você a calcular sua média ponderada de notas e prever o que você precisa alcançar em futuras avaliações para manter ou melhorar sua média.</p>
-    <form method="post">
-      <label>Quantas avaliações você já teve?</label>
-      <input type="number" name="num_avaliacoes"><br><br>
-      {% for i in range(int(num_avaliacoes)) %}
-      <label>Nota da avaliação {{i+1}}:</label>
-      <input type="number" step="0.01" name="nota{{i}}"><br>
-      <label>Peso da avaliação {{i+1}}:</label>
-      <input type="number" step="0.01" name="peso{{i}}"><br><br>
-      {% endfor %}
-      <label>Média para aprovação na matéria:</label>
-      <input type="number" step="0.01" name="media_aprovacao"><br><br>
-      <input type="submit" value="Calcular">
-    </form>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Resultado</h1>
+  <p>Sua nota final é: {{ nota_final }}</p>
+  <p>{{ mensagem }}</p>
+{% endblock %}
