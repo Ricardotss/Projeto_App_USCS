@@ -1,5 +1,0 @@
-https://www.python.org/
-py install pip        (Meu comp/Prop|Avanç/Sist|Var/Amb|Path = IDLE/ New File/ Copy )
-py -m pip install --upgrade pip
-pip -m install flask
-jinja2 extension
